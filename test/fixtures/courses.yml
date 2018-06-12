@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  jornada: MyString
+  teacher: one
+
+two:
+  nombre: MyString
+  jornada: MyString
+  teacher: two

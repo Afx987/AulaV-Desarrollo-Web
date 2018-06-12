@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombretarea: MyString
+  fechapublicacion: 2018-05-16 22:22:54
+  fechaexpiracion: 2018-05-16 22:22:54
+  c_student: one
+
+two:
+  nombretarea: MyString
+  fechapublicacion: 2018-05-16 22:22:54
+  fechaexpiracion: 2018-05-16 22:22:54
+  c_student: two
