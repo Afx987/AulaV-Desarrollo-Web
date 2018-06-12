@@ -1,24 +1,10 @@
-# README
+# PROYECTO AULAV DESARROLLO WEB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este proyecto es para posterior evaluación en Desarrollo Web acorde a este primer commit efectuado el 12/06/2018 16:54 hrs UTC, por lo cual es un front-end con funcionalidades específicas de un aula virtual. 
 
-Things you may want to cover:
+Integrantes : 
 
-* Ruby version
+-Hernán Herrera 
+-Andrés Pizarro 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ante cualquier cambio se dejará en todo caso una descripción por aquí en el readme.md
