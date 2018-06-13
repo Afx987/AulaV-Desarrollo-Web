@@ -8,11 +8,11 @@ class TeachersController < ApplicationController
     #end
   
     #POST /teachers
-    def create
+    #def create
 
-      @teacher = Teacher.create!(teacher_params)
-      json_response(@teacher, :created)
-    end
+    #  @teacher = Teacher.create!(teacher_params)
+    #  json_response(@teacher, :created)
+    #end
 
     # GET /teachers/:teacher_id
     def show
