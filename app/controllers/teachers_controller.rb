@@ -7,12 +7,12 @@ class TeachersController < ApplicationController
      json_response(@teachers)
     end
   
-    # POST /teachers
-    #def create
+    POST /teachers
+    def create
 
-    #  @teacher = Teacher.create!(teacher_params)
-    #  json_response(@teacher, :created)
-    #end
+      @teacher = Teacher.create!(teacher_params)
+      json_response(@teacher, :created)
+    end
 
     # GET /teachers/:teacher_id
     def show
