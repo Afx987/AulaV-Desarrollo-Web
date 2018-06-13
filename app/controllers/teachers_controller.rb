@@ -1,13 +1,13 @@
 class TeachersController < ApplicationController
     before_action :set_teacher, only: [:show, :update, :destroy]
 
-    GET /teachers
+    #GET /teachers
     def index
       @teachers = Teacher.all
      json_response(@teachers)
     end
   
-    POST /teachers
+    #POST /teachers
     def create
 
       @teacher = Teacher.create!(teacher_params)
