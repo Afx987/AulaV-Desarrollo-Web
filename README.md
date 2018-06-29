@@ -11,7 +11,7 @@ Version final estable subida a 29/06/2018 , para hacer funcionar hay que seguir 
 
 2) Es necesario guiarse con el modelo ER en la imagen debido a que se generan las relaciones con las rutas correspondientes en los controladores del back-end , esta en funcionamiento los videos , crear profesor , crear curso y crear clase.
 
-3) Ejecutar la migracion de base de datos sino tirará error:
+3) Ejecutar la migracion de base de datos sino tirará error (desde la carpeta BACKEND):
 
 ```
 rake db:migrate
