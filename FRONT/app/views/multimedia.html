@@ -1,0 +1,46 @@
+<p>Esta es la vista video</p>
+
+
+
+<div ng-include="main.plantilla.url" ng-init="visualizarVideos()"></div>
+
+
+<div class="container">
+    <!-- <button type="button" class="btn btn-default" ng-click="metodo1()">Ir al Formu</button> -->
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">nombre</label>
+        <input type="text" class="form-control" placeholder="nombre del video" ng-model="video.nombre">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">url</label>
+        <input type="text" class="form-control" placeholder="url del video" ng-model="video.url">
+      </div>
+      
+      <button type="submit" class="btn btn-default" ng-click="crearVideo();visualizarVideos()">Crear</button>
+      <button type="submit" class="btn btn-default" ng-click="visualizarVideos()">Ver</button>
+     
+    
+      
+      
+      <!--ng-click="verCurso()">Submit</button>
+      <a href="cursos.html">Mi perfil</a>-->
+    
+    
+  
+    
+      <!--<button type="submit" class="btn btn-default" ng-click="verCursos()">Ver cursos</button>-->
+    </form>
+    <!-- <p> el nombre es:{{persona}}</p> -->
+</div>
+<!--{{video}}-->
+
+
+
+<div ng-repeat="video in video2">
+
+    <td>{{video.nombre}}</td>
+    <td >{{video.url}}</td>
+
+    <button type="submit" class="btn btn-default" ng-click="borrarCurso(clase.area)">Borrar</button>
+</div>
