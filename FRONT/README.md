@@ -1,12 +1,9 @@
-# servicecourse
+# FRONT-END Desarrollo Web
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+Este proyecto es para posterior evaluación en Desarrollo Web acorde a este primer commit efectuado el 29/06/2018 01:14 hrs UTC, por lo cual es un front-end con funcionalidades específicas de un aula virtual.
 
-## Build & development
+Integrantes :
 
-Run `grunt` for building and `grunt serve` for preview.
+-Hernán Herrera -Andrés Pizarro
 
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+Ante cualquier cambio se dejará en todo caso una descripción por aquí en el readme.md
