@@ -8,7 +8,7 @@
  * Controller of the servicecourseApp
  */
 angular.module('servicecourseApp')
-  .controller('MultimediaCtrl', function ($scope,$location,video,idco,idca) {
+  .controller('MultimediaCtrl', function ($scope,$location,video,idco,idca,yt) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -23,6 +23,7 @@ angular.module('servicecourseApp')
 
     $scope.video={}
     $scope.video2={}
+    $scope.id={}
 
 
 
@@ -73,4 +74,35 @@ angular.module('servicecourseApp')
   		});
       console.log($scope.video2)
     }
+
+
+    
+    
+    /*$scope.verVideos=function(){
+    youtubeFactory.getVideoById({
+      videoId: "xcJtL7QggTI",
+      key: "AIzaSyCFeXgy6Boj4bUHrBFVDsbsCUWg8Pzb2Yc",
+  }).then(function (respuesta) {
+          console.log(respuesta)
+  }).catch(function (error) {
+          console.log(error)
+  });}*/
+
+
+        
+
+    
 });
+
+angular.module("jtt_youtube",["appfrontendApp"])
+ .controller('appController', function($scope, youtubeFactory){
+    youtubeFactory.getVideoById({
+      videoId: "di60mvq5ImA",
+      key: "AIzaSyCFeXgy6Boj4bUHrBFVDsbsCUWg8Pzb2Yc",
+  }).then(function (respuesta) {
+          console.log(respuesta)
+  }).catch(function (error) {
+          console.log(error)
+  });
+});
+

@@ -19,8 +19,8 @@ class ClassroomsController < ApplicationController
 
     # POST /teachers/:teacher_id/courses/:course_id/classrooms
     def create
-        @course.classrooms.create!(classroom_params)
-        json_response(@classroom, :created)
+        @variablex=@course.classrooms.create!(classroom_params)
+        json_response(@variablex, :created)
     end
 
     # PUT /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id
