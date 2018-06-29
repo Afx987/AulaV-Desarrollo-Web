@@ -59,3 +59,10 @@ html,body {
            }
 
            #main{ z-index:10;}
+
+           .table-wrapper-2 {
+            display: block;
+            max-height: 480px;
+            overflow-y: auto;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }

@@ -41,7 +41,7 @@
 </div>
 
 
-<div ng-repeat="clase in clase2">
+<!--<div ng-repeat="clase in clase2">
 
   <td>{{clase.area}}</td>
   <td >{{clase.tema}}</td>
@@ -51,7 +51,39 @@
 
   <button type="submit" class="btn btn-default" ng-model=course.id ng-click="verVideos(clase.id)">Multimedia</button>
   <button type="submit" class="btn btn-default" ng-click="borrarClases(clase.id);verClases()">Borrar clase</button>
-</div>
+</div>-->
 
 
 
+<div class="card">
+    <div class="card-body">
+  
+        <div class="table-wrapper-2">
+  
+            <!--Table-->
+            <table class="table table-responsive-md">
+                <thead class="mdb-color lighten-4">
+                    <tr>
+                        <th class="th-lg">Area de la clase</th>
+                        <th class="th-lg">Tema especifico</th>
+                        <th class="th-lg">Cupos</th>
+                        <th class="th-lg">Direccion</th>
+                        <th class="th-lg">Opciones</th>
+
+                    </tr>
+                </thead>
+                <tbody ng-repeat="clase in clase2">
+                    <tr>
+                        <td >{{clase.area}}</td>
+                        <td >{{clase.tema}}</td> 
+                        <td>{{clase.cupos}}</td>
+                        <td>{{clase.direccion}}</td>
+                        <td><button type="submit" class="btn btn-default" ng-click="verVideos(clase.id)">Multimedios</button>
+                        <button type="submit" class="btn btn-default" ng-click="borrarClases(clase.id);verClases()">Borrar clase</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--Table-->
+        </div>
+    </div>
+  </div>
