@@ -17,20 +17,20 @@ class CoursesController < ApplicationController
 
   # POST /teachers/:teacher_id/courses
   def create
-    @teacher.courses.create!(course_params)
-    json_response(@teacher, :created)
+    @variable=@teacher.courses.create!(course_params)
+    json_response(@variable, :created)
   end
 
   # PUT /teachers/:teacher_id/courses/:course_id
   def update
     @course.update(course_params)
-    head :no_content
+    #head :no_content
   end
 
   # DELETE /teachers/:teacher_id/courses/:course_id
   def destroy
     @course.destroy
-    head :no_content
+    #head :no_content
   end
 
   def id_course

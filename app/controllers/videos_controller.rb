@@ -2,47 +2,58 @@ class VideosController < ApplicationController
     before_action :set_classroom
     before_action :set_classroom_video, only: [:show, :update, :destroy]
 
-  
 
-    # GET /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id/videos
+    #GET /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id/videos
     def index
-        json_response(@classroom.videos)
+       json_response(@classroom.videos)
     end
     
-    # GET /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id/videos/:video_id
+    #GET /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id/videos/:video_id
     def show
-        json_response(@video)
+       json_response(@video)
     end
 
-    # POST /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id/videos
+    #POST /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id/videos
     def create
-        @classroom.videos.create!(video_params)
-        json_response(@video, :created)
+       @vvideo=@classroom.videos.create!(video_params)
+       json_response(@vvideo, :created)
     end
 
-    # PUT /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id/videos/:video_id
+    #PUT /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id/videos/:video_id
     def update
-        @video.update(video_params)
-        head :no_content
+       @video.update(video_params)
+       head :no_content
     end
 
-    # DELETE /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id/videos/:video_id
+    #DELETE /teachers/:teacher_id/courses/:course_id/classrooms/:classroom_id/videos/:video_id
     def destroy
-        @video.destroy
-        head :no_content
+       @video.destroy
+       head :no_content
     end
 
     private
 
     def video_params
-        params.permit(:nombre, :url)
+       params.permit(:nombre, :url)
     end
 
     def set_classroom
-        @classroom = Classroom.find(params[:classroom_id])
+       @classroom = Classroom.find(params[:classroom_id])
     end
 
     def set_classroom_video
-        @video = @classroom.videos.find_by!(id: params[:id]) if @classroom
+       @video = @classroom.videos.find_by!(id: params[:id]) if @classroom
     end
+
+    # def postVideo
+    #     nombre = params[:nombre]
+    #     url = params[:url]
+    #     videos = Video.new(:nombre => nombre,:url => url)
+    #     videos.save
+    #     render json: {status: 'SUCCESS',message: 'videos', data:videos}, status: :ok
+    # end 
+
+    #def getVideo 
+
+    #end 
 end
