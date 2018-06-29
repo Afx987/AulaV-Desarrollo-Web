@@ -1,11 +1,15 @@
 <p>Esta es la vista cursos</p>
 
+
+<link rel="stylesheet" href="styles/cursos.css">
 <div ng-include="main.plantilla.url" ng-init="verCursos()"></div>
+<body>
+<img id="background" src="images/Pizarra.jpg">
 <div class="container">
 <!-- <button type="button" class="btn btn-default" ng-click="metodo1()">Ir al Formu</button> -->
 
 
-
+  <link rel="stylesheet" href="styles/cursos.css">
 
 
 <div ng-repeat="course in course">
@@ -18,4 +22,4 @@
   <button type="submit" class="btn btn-default" ng-model=course.id ng-click="verClases(course.id)">Clases</button>
   <button type="submit" class="btn btn-default" ng-click="borrarCurso(course.id)">Borrar curso</button>
 </div>
-
+</body>
