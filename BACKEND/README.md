@@ -1,6 +1,6 @@
 # PROYECTO AULAV DESARROLLO WEB
 
-Este proyecto es para posterior evaluación en Desarrollo Web acorde a este primer commit efectuado el 12/06/2018 16:54 hrs UTC, por lo cual es un front-end con funcionalidades específicas de un aula virtual. 
+Este proyecto es para posterior evaluación en Desarrollo Web acorde a este primer commit efectuado el 12/06/2018 16:54 hrs UTC, por lo cual es un back-end con funcionalidades específicas de un aula virtual. 
 
 Integrantes : 
 
