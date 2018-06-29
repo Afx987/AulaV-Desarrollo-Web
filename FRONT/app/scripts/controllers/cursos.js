@@ -23,11 +23,34 @@ angular.module('servicecourseApp')
     $scope.course ={}
 
 
+    $scope.borrarCurso=function(id){
+      course.eliminarCurso(id)
+      .then(function(respuesta){
+        console.log(respuesta)
+      },
+      function(error){
+        console.log(error)
+      });
+      console.log($scope.course)
 
+      
 
-    $scope.idco='';
+   
+    
+      course.mostrarCursos()
+      .then(function(respuesta) {
+        console.log(respuesta)
+        $scope.course=respuesta.data
+  		},
+  		function(error) { // optional
+        console.log(error)
+  		});
+      console.log($scope.course)
+
+      
+    },
+
  
-
     $scope.verCursos = function(){
       // $location.path( "/formulario" );
       course.mostrarCursos()
@@ -41,16 +64,7 @@ angular.module('servicecourseApp')
       console.log($scope.course)
     },
 
-    $scope.borrarCurso=function(id){
-      course.eliminarCurso(id)
-      .then(function(respuesta){
-        console.log(respuesta)
-      },
-      function(error){
-        console.log(error)
-      });
-      console.log($scope.course)
-    },
+    
 
     $scope.verClases=function(id){
       idco.text=id;

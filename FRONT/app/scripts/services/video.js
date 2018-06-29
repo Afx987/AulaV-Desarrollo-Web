@@ -26,6 +26,15 @@ angular.module('servicecourseApp')
           method: 'GET',
           url:'http://localhost:3000/teachers/1/courses/'+idco+'/classrooms/'+idca+'/videos',
         });
+      },
+
+      eliminarVideos: function(idco,idca,id){
+        return $http({
+          method: 'DELETE',
+          url:'http://localhost:3000/teachers/1/courses/'+idco+'/classrooms/'+idca+'/videos/'+id,
+        });
       }
+
+
     }
   });

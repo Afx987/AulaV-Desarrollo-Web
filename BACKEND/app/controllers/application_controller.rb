@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
     include Response
+
     rescue_from ActiveRecord::RecordInvalid, with: :error_atributos
     rescue_from ActiveRecord::RecordNotFound, with: :no_encontrado
 

@@ -1,10 +1,9 @@
-<p>Esta es la vista video</p>
-
-
 <!--<script src="bower_components/angular-youtube-api-factory/dist/angular-youtube-api-factory.min.js"></script>-->
-<div ng-include="main.plantilla.url" ng-init="visualizarVideos()"></div>
+<div ng-include="multimedia.plantilla.url" ng-init="visualizarVideos()"></div>
 
-
+<body>
+<img id="background" src="images/Pizarra.jpg">
+<link rel="stylesheet" href="styles/classroom.css">
 <div class="container">
     <!-- <button type="button" class="btn btn-default" ng-click="metodo1()">Ir al Formu</button> -->
     <form>
@@ -16,35 +15,35 @@
         <label for="exampleInputPassword1">url</label>
         <input type="text" class="form-control" placeholder="url del video" ng-model="video.url">
       </div>
-      
+
       <button type="submit" class="btn btn-default" ng-click="crearVideo();visualizarVideos()">Crear</button>
       <button type="submit" class="btn btn-default" ng-click="visualizarVideos()">Ver</button>
-     
-    
-      
-      
+
+
+
+
       <!--ng-click="verCurso()">Submit</button>
       <a href="cursos.html">Mi perfil</a>-->
-    
-    
-  
-    
+
+
+
+
       <!--<button type="submit" class="btn btn-default" ng-click="verCursos()">Ver cursos</button>-->
     </form>
     <!-- <p> el nombre es:{{persona}}</p> -->
 </div>
 <!--{{video}}-->
 
-
+</body>
 
 <div ng-repeat="video in video2">
 
     <td>{{video.nombre}}</td>
     <td >{{video.url}}</td>
 
-    <button type="submit" class="btn btn-default" ng-click="borrarCurso(clase.area)">Borrar</button>
+    <button type="submit" class="btn btn-default" ng-click="borrarVideos(video.id);visualizarVideos()">Borrar</button>
     <div class="container">
-      <iframe width="420" height="315" src="https://www.youtube.com/embed/"+{{video.url}}></iframe>
+      <iframe width="420" height="315" ng-src="{{trustSrc(video.url)}}"></iframe>
   </div>
 </div>
 

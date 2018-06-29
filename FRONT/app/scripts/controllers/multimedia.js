@@ -8,7 +8,7 @@
  * Controller of the servicecourseApp
  */
 angular.module('servicecourseApp')
-  .controller('MultimediaCtrl', function ($scope,$location,video,idco,idca,yt) {
+  .controller('MultimediaCtrl', function ($scope,$location,$sce,video,idco,idca,yt) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -24,6 +24,9 @@ angular.module('servicecourseApp')
     $scope.video={}
     $scope.video2={}
     $scope.id={}
+    $scope.trustSrc=function(src){
+      return $sce.trustAsResourceUrl(src);
+    }
 
 
 
@@ -33,13 +36,16 @@ angular.module('servicecourseApp')
       .then(function(respuesta) {
         console.log(respuesta)
         $scope.video2=respuesta.data
+        for (var i=0;i<$scope.video2.length;i++){
+          $scope.video2[i].url= 'https://www.youtube.com/embed/'+$scope.video2[i].url
+        }
   		},
   		function(error) { // optional
         console.log(error)
   		});
       //console.log($scope.video2)
       console.log($scope.video2)
-    }
+    },
 
 
     /*$scope.crearVideo=function(){
@@ -54,7 +60,37 @@ angular.module('servicecourseApp')
     }*/
 
 
+    $scope.borrarVideos=function(id){
+      video.eliminarVideos(idco.text,idca.text,id)
+      .then(function(respuesta){
+       console.log(respuesta)
+     },
+     function(error){
+       console.log(error)
+     });
+     console.log($scope.video)
+
+     
+     video.mostrarVideos(idco.text,idca.text)
+     .then(function(respuesta) {
+       console.log(respuesta)
+       $scope.video2=respuesta.data
+       for (var i=0;i<$scope.video2.length;i++){
+         $scope.video2[i].url= 'https://www.youtube.com/embed/'+$scope.video2[i].url
+       }
+     },
+     function(error) { // optional
+       console.log(error)
+     });
+     console.log($scope.video2)
+ 
+  
+ 
+    },
+
+
     $scope.crearVideo=function(){
+      $scope.video.url=$scope.video.url.split("=")[1]
       video.agregarVideo($scope.video,idco.text,idca.text)
       .then(function(respuesta) {
         console.log(respuesta)
@@ -68,12 +104,22 @@ angular.module('servicecourseApp')
       .then(function(respuesta) {
         console.log(respuesta)
         $scope.video2=respuesta.data
+        for (var i=0;i<$scope.video2.length;i++){
+          $scope.video2[i].url= 'https://www.youtube.com/embed/'+$scope.video2[i].url
+        }
   		},
   		function(error) { // optional
         console.log(error)
   		});
       console.log($scope.video2)
     }
+
+    /*$scope.cortarURL=function(url){
+
+
+
+
+    }*/
 
 
     

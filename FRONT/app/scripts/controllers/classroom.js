@@ -40,6 +40,30 @@ angular.module('servicecourseApp')
     }
 
 
+   $scope.borrarClases=function(id){
+     clase.eliminarClases(idco.text,id)
+     .then(function(respuesta){
+      console.log(respuesta)
+    },
+    function(error){
+      console.log(error)
+    });
+    console.log($scope.course)
+
+    
+    clase.mostrarClases(idco.text)
+      .then(function(respuesta) {
+        console.log(respuesta)
+        $scope.clase2=respuesta.data
+  		},
+  		function(error) { // optional
+        console.log(error)
+  		});
+      console.log($scope.clase2)
+
+   },
+
+
    $scope.crearClases = function(){
       clase.agregarClase($scope.clase,idco.text)
       .then(function(respuesta) {

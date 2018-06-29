@@ -1,13 +1,8 @@
-<p>Esta es la vista clases</p>
-
-
-
-<div ng-include="main.plantilla.url" ng-init="verClases()"></div>
+<div ng-include="classroom.plantilla.url" ng-init="verClases()"></div>
 
 
 <body>
 <img id="background" src="images/Pizarra.jpg">
-
 <link rel="stylesheet" href="styles/classroom.css">
 <div class="container">
   <!-- <button type="button" class="btn btn-default" ng-click="metodo1()">Ir al Formu</button> -->
@@ -30,16 +25,16 @@
     </div>
     <button type="submit" class="btn btn-default" ng-click="crearClases();verClases()">Crear</button>
     <button type="submit" class="btn btn-default" ng-click="verClases()">Ver</button>
-
-
-</body>
-
+   
+  
+  </body>
+    
     <!--ng-click="verCurso()">Submit</button>
     <a href="cursos.html">Mi perfil</a>-->
+  
+  
 
-
-
-
+  
     <!--<button type="submit" class="btn btn-default" ng-click="verCursos()">Ver cursos</button>-->
   </form>
   <!-- <p> el nombre es:{{persona}}</p> -->
@@ -55,5 +50,8 @@
 
 
   <button type="submit" class="btn btn-default" ng-model=course.id ng-click="verVideos(clase.id)">Multimedia</button>
-  <button type="submit" class="btn btn-default" ng-click="borrarCurso(clase.area)">Borrar clase</button>
+  <button type="submit" class="btn btn-default" ng-click="borrarClases(clase.id);verClases()">Borrar clase</button>
 </div>
+
+
+

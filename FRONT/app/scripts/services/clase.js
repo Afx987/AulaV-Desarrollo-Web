@@ -24,6 +24,13 @@ angular.module('servicecourseApp')
           method: 'GET',
           url:'http://localhost:3000/teachers/1/courses/'+id+'/classrooms',
         });
+      },
+
+      eliminarClases: function(idco,idca){
+        return $http({
+          method: 'DELETE',
+          url:'http://localhost:3000/teachers/1/courses/'+idco+'/classrooms/'+idca,
+        });
       }
     }
 
